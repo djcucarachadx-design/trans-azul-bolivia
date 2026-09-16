@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horarios | Trans Azul Bolivia</title>
+<style>
+:root{--azul:#08205c;--azul-claro:#1f4fb8;--rojo:#d63d3d;--dorado:#c9a227;--gris:#eef2f7;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:var(--gris);}
+.sidebar{position:fixed;left:0;top:0;width:280px;height:100%;background:linear-gradient(180deg,var(--azul),var(--azul-claro));box-shadow:4px 0 20px rgba(0,0,0,.2);border-right:3px solid var(--dorado);}
+.logo{text-align:center;padding:25px;border-bottom:1px solid rgba(255,255,255,.15);} .logo img{width:170px;}
+.logo h2{color:white;margin-top:10px;} .logo span{color:var(--dorado);}
+.sidebar a{display:block;color:white;text-decoration:none;padding:16px 25px;margin:8px 15px;border-radius:12px;transition:.3s;font-size:17px;}
+.sidebar a:hover{background:rgba(214,61,61,.25);border-left:5px solid var(--dorado);transform:translateX(5px);}
+.main{margin-left:280px;padding:30px;}
+.header{background:white;padding:25px 35px;border-radius:20px;border-top:6px solid var(--rojo);box-shadow:0 5px 20px rgba(0,0,0,.08);}
+.header h1{color:var(--azul);font-size:42px;} .header p{color:#666;margin-top:10px;font-size:18px;}
+.top{margin-top:25px;background:white;padding:30px;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,.08);}
+.top h1{color:var(--azul);} .top h3{margin-top:15px;color:#333;line-height:2;font-weight:500;}
+footer{margin-top:35px;background:linear-gradient(90deg,var(--azul),var(--azul-claro));color:white;text-align:center;padding:25px;border-top:4px solid var(--dorado);border-radius:20px 20px 0 0;}
+.redes-sociales{position:fixed;right:25px;bottom:25px;display:flex;flex-direction:column;gap:12px;z-index:1000;}
+.redes-sociales a{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;font-size:27px;font-weight:bold;box-shadow:0 4px 12px rgba(0,0,0,.25);}
+.facebook{background:#1877f2;} .tiktok{background:#000;} .instagram{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);}
+@media(max-width:900px){.sidebar{position:relative;width:100%;height:auto;}.main{margin-left:0;}}
+</style>
+</head>
+<body>
+<div class="redes-sociales"><a href="#" class="facebook">f</a><a href="#" class="tiktok">♪</a><a href="#" class="instagram">◎</a></div>
+<div class="sidebar">
+<div class="logo"><img src="img/logotipovip.png"></div>
+<div class="logo"><img src="img/logoTransAzul.png"></div>
+<a href="index.html">🏠 Inicio</a><a href="viajes.html">🚌 Viajes</a><a href="galeria.html">📸 Galería</a><a href="horarios.html" class="active">🕒 Horarios</a><a href="sobrenosotros.html">📞 Sobre nosotros</a>
+</div>
+<div class="main">
+<div class="header"><h1>horarios</h1><p>verifica horarios</p></div>
+<div class="top"><h1>Cochabamba</h1><h3>4:30 - 5:40 - 6:00 - 6:45 - 7:30 - 9:00 - 10:30 - 11:30 - 12:30 - 13:30 - 14:30 - 15:30 - 17:00 - 18:00</h3></div>
+<div class="top"><h1>Villazón</h1><h3>5:00 - 7:00 - 9:30 - 13:00 - 15:30 - 18:30 - 20:00</h3></div>
+<div class="top"><h1>Sucre</h1><h3>6:00 - 8:30 - 11:00 - 14:00 - 17:30 - 19:30</h3></div>
+<footer>© 2026 Trans Azul Bolivia</footer>
+</div>
+</body>
+</html>

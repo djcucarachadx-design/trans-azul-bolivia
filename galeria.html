@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trans Azul Bolivia - Galeria</title>
+<style>
+:root{--azul:#08205c;--azul-claro:#1f4fb8;--rojo:#d63d3d;--dorado:#c9a227;--gris:#eef2f7;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:var(--gris);}
+.sidebar{position:fixed;left:0;top:0;width:280px;height:100%;background:linear-gradient(180deg,var(--azul),var(--azul-claro));box-shadow:4px 0 20px rgba(0,0,0,.2);border-right:3px solid var(--dorado);}
+.logo{text-align:center;padding:25px;border-bottom:1px solid rgba(255,255,255,.15);} .logo img{width:170px;}
+.sidebar a{display:block;color:white;text-decoration:none;padding:16px 25px;margin:8px 15px;border-radius:12px;transition:.3s;font-size:17px;}
+.sidebar a:hover{background:rgba(214,61,61,.25);border-left:5px solid var(--dorado);transform:translateX(5px);}
+.main{margin-left:280px;padding:30px;}
+.header{background:white;padding:25px 35px;border-radius:20px;border-top:6px solid var(--rojo);box-shadow:0 5px 20px rgba(0,0,0,.08);}
+.header h1{color:var(--azul);font-size:42px;} .header p{color:#666;margin-top:10px;font-size:18px;}
+.section{margin-top:30px;background:white;padding:35px;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,.08);}
+.section h2{color:var(--azul);margin-bottom:20px;} .section h2::after{content:"";display:block;width:90px;height:4px;background:linear-gradient(90deg,var(--rojo),var(--dorado));margin-top:10px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
+.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 5px 18px rgba(0,0,0,.12);border-bottom:5px solid var(--rojo);transition:.3s;}
+.card:hover{transform:translateY(-10px);} .card img{width:100%;height:220px;object-fit:cover;}
+.card h3{color:var(--azul);padding:18px 18px 10px;} .card p{padding:0 18px 10px;color:#666;}
+.card button{margin:10px 18px 20px;padding:12px;width:calc(100% - 36px);background:linear-gradient(90deg,var(--azul),var(--azul-claro));color:white;border:none;border-radius:25px;font-weight:bold;cursor:pointer;}
+footer{margin-top:35px;background:linear-gradient(90deg,var(--azul),var(--azul-claro));color:white;text-align:center;padding:25px;border-top:4px solid var(--dorado);border-radius:20px 20px 0 0;}
+.redes-sociales{position:fixed;right:25px;bottom:25px;display:flex;flex-direction:column;gap:12px;z-index:1000;}
+.redes-sociales a{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;font-size:27px;font-weight:bold;box-shadow:0 4px 12px rgba(0,0,0,.25);}
+.facebook{background:#1877f2;} .tiktok{background:#000;} .instagram{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);}
+@media(max-width:900px){.sidebar{position:relative;width:100%;height:auto;}.main{margin-left:0;}}
+</style>
+</head>
+<body>
+<div class="redes-sociales"><a href="#" class="facebook">f</a><a href="#" class="tiktok">♪</a><a href="#" class="instagram">◎</a></div>
+<div class="sidebar"><div class="logo"><img src="img/logotipovip.png"></div><div class="logo"><img src="img/logoTransAzul.png"></div>
+<a href="index.html">🏠 Inicio</a><a href="viajes.html">🚌 Viajes</a><a href="galeria.html" class="active">📸 Galería</a><a href="horarios.html">🕒 Horarios</a><a href="sobrenosotros.html">📞 Sobre nosotros</a></div>
+<div class="main"><div class="header"><h1>Galeria</h1><p>Explora Bolivia con Trans Azul</p></div>
+<div class="section"><h2>Destinos disponibles</h2><div class="grid">
+<div class="card"><img src="https://media-cdn.tripadvisor.com/media/photo-s/0b/67/1e/13/municipalidad-de-villazon.jpg"><h3>Villazon</h3><p>Frontera</p><button onclick="location.href='Tupiza.html'">Observar</button></div>
+<div class="card"><img src="https://rrii.unifranz.edu.bo/images/campus/cochabamba.jpg"><h3>Cochabamba</h3><p>Ciudad de la eterna primavera y famosa por su gastronomía.</p><button onclick="location.href='Cochabamba.html'">Observar</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429"><h3>Sucre</h3><p>Capital de Bolivia</p><button onclick="location.href='Sucre.html'">Observar</button></div>
+<div class="card"><img src="img/Potosi.jpg"><h3>Potosí</h3><p>Ciudad histórica famosa por el Cerro Rico</p><button onclick="location.href='viajes.html'">Observar</button></div>
+<div class="card"><img src="img/Flota-7G.jpg"><h3>Flota 7g</h3><p>Las más pequeñas pero igual de buenas. Cómodas</p><button onclick="location.href='viajes.html'">Observar</button></div>
+<div class="card"><img src="img/Flota-8G.jpg"><h3>Flota 8g</h3><p>Las más grandes y muy buenas. Cómodas</p><button onclick="location.href='viajes.html'">Observar</button></div>
+</div></div><footer><p>© 2026 Trans Azul Bolivia</p></footer></div>
+</body>
+</html>

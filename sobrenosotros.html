@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nosotros - Trans Azul Bolivia</title>
+<style>
+:root{
+    --azul:#08205c;
+    --azul-claro:#1f4fb8;
+    --rojo:#d63d3d;
+    --dorado:#c9a227;
+    --gris:#eef2f7;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+body{
+    background:var(--gris);
+}
+/* MENU */
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:280px;
+    height:100%;
+    background:linear-gradient(180deg,var(--azul),var(--azul-claro));
+    box-shadow:4px 0 20px rgba(0,0,0,.2);
+    border-right:3px solid var(--dorado);
+}
+.logo{
+    text-align:center;
+    padding:25px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+.logo img{
+    width:170px;
+}
+.logo h2{
+    color:white;
+    margin-top:10px;
+}
+.logo span{
+    color:var(--dorado);
+}
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:16px 25px;
+    margin:8px 15px;
+    border-radius:12px;
+    transition:.3s;
+    font-size:17px;
+}
+.sidebar a:hover{
+    background:rgba(214,61,61,.25);
+    border-left:5px solid var(--dorado);
+    transform:translateX(5px);
+}
+/* CONTENIDO */
+.main{
+    margin-left:280px;
+    padding:30px;
+}
+/* HEADER */
+.header{
+    background:white;
+    padding:25px 35px;
+    border-radius:20px;
+    border-top:6px solid var(--rojo);
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+.header h1{
+    color:var(--azul);
+    font-size:42px;
+}
+.header p{
+    color:#666;
+    margin-top:10px;
+    font-size:18px;
+}
+/* BANNER */
+.banner{
+    margin-top:25px;
+    position:relative;
+}
+.banner img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:20px;
+}
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+    rgba(8,32,92,.6),
+    rgba(214,61,61,.4)
+    );
+    border-radius:20px;
+}
+.banner-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+}
+.banner-text h2{
+    font-size:50px;
+}
+.banner-text p{
+    font-size:20px;
+    margin-top:10px;
+}
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:linear-gradient(90deg,var(--rojo),#ef5350);
+    color:white;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:30px;
+    font-weight:bold;
+}
+/* SECCIONES */
+.section{
+    margin-top:30px;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+.section h2{
+    color:var(--azul);
+    margin-bottom:20px;
+}
+.section h2::after{
+    content:"";
+    display:block;
+    width:90px;
+    height:4px;
+    background:linear-gradient(90deg,var(--rojo),var(--dorado));
+    margin-top:10px;
+}
+.section p{
+    color:#555;
+    line-height:1.8;
+}
+/* TARJETAS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+    border-bottom:5px solid var(--rojo);
+    transition:.3s;
+}
+.card:hover{
+    transform:translateY(-10px);
+}
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+.card h3{
+    color:var(--azul);
+    padding:18px 18px 10px;
+}
+.card p{
+    padding:0 18px 20px;
+    color:#666;
+}
+.card a{
+    text-decoration:none;
+}
+/* DESTINOS */
+.destinos{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+.destino{
+    background:linear-gradient(135deg,var(--azul),var(--azul-claro));
+    color:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:bold;
+}
+/* FOOTER */
+footer{
+    margin-top:35px;
+    background:linear-gradient(90deg,var(--azul),var(--azul-claro));
+    color:white;
+    text-align:center;
+    padding:25px;
+    border-top:4px solid var(--dorado);
+    border-radius:20px 20px 0 0;
+}
+/* RESPONSIVE */
+@media(max-width:900px){
+.sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+}
+.main{
+    margin-left:0;
+}
+.destinos{
+    grid-template-columns:1fr;
+}
+.banner img{
+    height:280px;
+}
+.banner-text h2{
+    font-size:30px;
+}
+}
+/* REDES SOCIALES */
+.redes-sociales{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    z-index:1000;
+}
+.redes-sociales a{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-decoration:none;
+    font-size:27px;
+    font-weight:bold;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+    transition:.3s;
+}
+.redes-sociales a:hover{
+    transform:scale(1.15) translateX(-5px);
+}
+.facebook{
+    background:#1877f2;
+}
+.tiktok{
+    background:#000;
+}
+.instagram{
+    background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+}
+</style>
+</head>
+<body>
+<!-- REDES SOCIALES -->
+<div class="redes-sociales">
+    <a href="#" class="facebook" title="Facebook">f</a>
+    <a href="#" class="tiktok" title="TikTok">♪</a>
+    <a href="#" class="instagram" title="Instagram">◎</a>
+</div>
+
+<div class="sidebar">
+    <div class="logo">
+        <img src="img/logotipovip.png" alt="Logo VIP">
+    </div>
+    <div class="logo">
+        <img src="img/logoTransAzul.png" alt="Trans Azul">
+    </div>
+    <a href="index.html">🏠 Inicio</a>
+    <a href="viajes.html">🚌 Viajes</a>
+    <a href="galeria.html">📸 Galería</a>
+    <a href="horarios.html">🕒 Horarios</a>
+    <a href="sobrenosotros.html">📞 Sobre nosotros</a>
+</div>
+
+<div class="main">
+    <div class="header">
+        <h1>Sobre Nosotros - Trans Azul Bolivia</h1>
+        <p>Viaja seguro, rápido y cómodo por todo el país.</p>
+    </div>
+
+    <div class="banner">
+        <img src="img/TransAzul-inicio.png" alt="Trans Azul Banner">
+        <div class="overlay"></div>
+        <div class="banner-text">
+            <h2>Tu Viaje Comienza Aquí</h2>
+            <p>Seguridad, comodidad y puntualidad.</p>
+            <a href="#" class="btn">Comprar Pasaje</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Sobre Nosotros</h2>
+        <p>
+        Sobre Nosotros - Trans Azul Bolivia es una empresa dedicada al transporte
+        nacional de pasajeros. Nuestro compromiso es brindar
+        comodidad, seguridad y puntualidad en cada recorrido,
+        conectando ciudades y personas con un servicio de calidad.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Nuestros Servicios</h2>
+        <div class="grid">
+            <div class="card">
+                <a href="busesmodernos.html">
+                    <img src="img/Buses-modernos.png" alt="Buses Modernos">
+                    <h3>Buses Modernos</h3>
+                    <p>Equipados con tecnología y máxima comodidad.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="viajesnacionales.html">
+                    <img src="img/Viajes-nacionales.png" alt="Viajes Nacionales">
+                    <h3>Viajes Nacionales</h3>
+                    <p>Rutas seguras por toda Bolivia.</p>
+                </a>
+            </div>
+            <div class="card">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.nfgiBA5zfsKVAyBgqKWIPgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Seguridad">
+                <h3>Seguridad Garantizada</h3>
+                <p>Conductores capacitados y monitoreo constante.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Destinos Populares</h2>
+        <div class="destinos">
+            <div class="destino">La Paz</div>
+            <div class="destino">Cochabamba</div>
+            <div class="destino">Santa Cruz</div>
+            <div class="destino">Sucre</div>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Sobre Nosotros - Trans Azul Bolivia | Todos los derechos reservados
+    </footer>
+</div>
+
+</body>
+</html>

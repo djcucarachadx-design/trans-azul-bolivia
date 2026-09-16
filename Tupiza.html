@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tupiza | Trans Azul Bolivia</title>
+<style>
+:root{
+    --azul:#071b4d;
+    --azul2:#0d347f;
+    --azul3:#1d5dcc;
+    --rojo:#c92835;
+    --dorado:#d4af37;
+    --blanco:#ffffff;
+    --gris:#f3f5f8;
+    --texto:#30343b;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Arial,sans-serif;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background:var(--gris);
+    color:var(--texto);
+}
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:270px;
+    height:100vh;
+    background:linear-gradient(180deg,var(--azul),var(--azul2));
+    box-shadow:5px 0 25px rgba(0,0,0,.18);
+    border-right:3px solid var(--dorado);
+    z-index:1000;
+}
+.logo{
+    text-align:center;
+    padding:20px 15px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+.logo img{
+    width:150px;
+    max-height:95px;
+    object-fit:contain;
+}
+.sidebar nav{
+    margin-top:20px;
+}
+.sidebar a{
+    display:flex;
+    align-items:center;
+    color:white;
+    text-decoration:none;
+    padding:15px 22px;
+    margin:7px 14px;
+    border-radius:10px;
+    font-size:16px;
+    transition:.3s;
+}
+.sidebar a:hover{
+    background:rgba(255,255,255,.12);
+    transform:translateX(5px);
+    border-left:4px solid var(--dorado);
+}
+.sidebar a.active{
+    background:rgba(255,255,255,.15);
+    border-left:4px solid var(--dorado);
+}
+.main{
+    margin-left:270px;
+    padding:30px 40px;
+}
+.header{
+    background:white;
+    padding:28px 35px;
+    border-radius:14px;
+    border-left:6px solid var(--rojo);
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+.header h1{
+    color:var(--azul);
+    font-size:38px;
+    font-weight:700;
+}
+.header p{
+    margin-top:7px;
+    color:#6b7280;
+    font-size:17px;
+}
+.section{
+    margin-top:30px;
+    background:white;
+    padding:32px;
+    border-radius:14px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+.section h2{
+    color:var(--azul);
+    font-size:26px;
+    margin-bottom:25px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.section h2::before{
+    content:"";
+    width:5px;
+    height:27px;
+    background:var(--rojo);
+    border-radius:5px;
+}
+.section p{
+    color:#5f6368;
+    line-height:1.7;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:25px;
+}
+.card{
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid #e4e7eb;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 12px 25px rgba(0,0,0,.13);
+}
+.card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    display:block;
+}
+.card h3{
+    color:var(--azul);
+    font-size:21px;
+    padding:18px 18px 8px;
+}
+.card p{
+    padding:0 18px 8px;
+    color:#666;
+    font-size:15px;
+}
+.card .precio{
+    color:var(--rojo);
+    font-size:17px;
+    font-weight:bold;
+    padding-top:5px;
+}
+.card button{
+    width:calc(100% - 36px);
+    margin:12px 18px 20px;
+    padding:13px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(90deg,var(--azul2),var(--azul3));
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+.card button:hover{
+    background:var(--azul);
+    transform:translateY(-2px);
+    box-shadow:0 5px 12px rgba(13,52,127,.3);
+}
+.card button:active{
+    transform:scale(.98);
+}
+.contratos-header{
+    margin-top:35px;
+    background:linear-gradient(100deg,var(--azul),var(--azul2));
+    color:white;
+    padding:30px 35px;
+    border-radius:14px;
+    border-bottom:4px solid var(--dorado);
+    box-shadow:0 7px 20px rgba(0,0,0,.12);
+}
+.contratos-header h1{
+    font-size:30px;
+}
+.contratos-header p{
+    margin-top:8px;
+    color:#dbe5ff;
+}
+.redes-sociales{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    display:flex;
+    flex-direction:column;
+    gap:11px;
+    z-index:2000;
+}
+.redes-sociales a{
+    width:48px;
+    height:48px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+    transition:.3s;
+}
+.redes-sociales a:hover{
+    transform:scale(1.12) translateX(-5px);
+}
+.facebook{background:#1877f2;}
+.tiktok{background:#111;}
+.instagram{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);}
+footer{
+    margin-top:40px;
+    background:var(--azul);
+    color:white;
+    text-align:center;
+    padding:25px;
+    border-top:3px solid var(--dorado);
+}
+footer p{
+    font-size:14px;
+    color:#d9e2f5;
+}
+.fade-in{
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity .7s ease,transform .7s ease;
+}
+.fade-in.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+@media(max-width:900px){
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+        border-right:none;
+        border-bottom:3px solid var(--dorado);
+    }
+    .logo{
+        display:flex;
+        justify-content:center;
+        gap:20px;
+    }
+    .sidebar nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    .sidebar a{
+        margin:5px;
+    }
+    .main{
+        margin-left:0;
+        padding:20px;
+    }
+    .header h1{
+        font-size:30px;
+    }
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+</style></head><body>
+<div class="redes-sociales"><a href="#" class="facebook">f</a><a href="#" class="tiktok">♪</a><a href="#" class="instagram">◎</a></div>
+<div class="sidebar"><div class="logo"><img src="img/logotipovip.png"></div><div class="logo"><img src="img/logoTransAzul.png"></div>
+<nav><a href="index.html">🏠 Inicio</a><a href="viajes.html" class="active">🚌 Viajes</a><a href="galeria.html">📸 Galería</a><a href="horarios.html">🕒 Horarios</a><a href="sobrenosotros.html">📞 Sobre nosotros</a></nav></div>
+<div class="main"><div class="header"><h1>Descubre Tupiza</h1><p>Un destino de paisajes rojizos, montañas y aventura</p></div>
+<div class="section"><h2>Destinos para descubrir</h2><p>Tupiza se encuentra en el departamento de Potosí, en un valle caracterizado por sus cerros colorados, formaciones rocosas y paisajes naturales. Sus alrededores ofrecen numerosos lugares para conocer y explorar.</p>
+<div class="grid" style="margin-top:20px;">
+<div class="card"><img src="img/Quebrada-de-Palala.jpg"><h3>Quebrada de Palala</h3><p>Impresionantes formaciones rocosas rojizas.</p><button onclick="location.href='https://maps.app.goo.gl/aKuDCYdKB1Ajm8V39'">Observar destino</button></div>
+<div class="card"><img src="img/El-Sillar-Tupiza.jpg"><h3>El Sillar</h3><p>Singulares formaciones rocosas.</p><button onclick="location.href='https://maps.app.goo.gl/Q1YcVawCs35sxfmVA'">Observar destino</button></div>
+<div class="card"><img src="img/Puerta-del-diablo-tupiza.jpg"><h3>Puerta del Diablo</h3><p>Formación natural de roca con apariencia de gran entrada.</p><button onclick="location.href='https://maps.app.goo.gl/B3weZXZrYQkVaz1NA'">Observar destino</button></div>
+</div></div>
+<footer><p>© 2026 Trans Azul Bolivia</p></footer></div></body></html>
